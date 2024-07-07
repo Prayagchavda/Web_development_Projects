@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>College Home Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styleforhtml.css">
+
+    </head>
+
+    <body>
+        <header class="header">
+
+            <div id="college-info">
+                <!-- <img src="college-logo.png" alt="College Logo" id="college-logo"> -->
+                <h1>Government Engineering College, Sector28, Gandhinagar</h1>
+                <!-- <h2>Gandhinagar-382028</h2> -->
+            </div>
+           
+                </div>
+                <div class="navbar">
+                    <div class="dropdown">
+                      <button class="dropbtn">Student
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="http://localhost/login/registrationstudent.php">Register</a>
+                        <a href="http://localhost/login/loginstudent.php">Login</a>
+                        
+                      </div>
+                    </div>
+                    <div class="dropdown">
+                      <button class="dropbtn">Faculty
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                      <div class="dropdown-content">
+                        <a href="http://localhost/login/registrationfaculty.php">Register</a>
+                        <a href="http://localhost/login/loginfaculty.php">Login</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </header>
+        <!-- Your existing code here -->
+
+        <!-- Slider Section -->
+        <div class="slider">
+            <img src="images/slider1.jpg" class="slide" style="display: block;">
+            <img src="images/slider2.png" class="slide">
+            <img src="images/slider3.png" class="slide">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <script src="script.js"></script>
+        <script>
+        // JavaScript for the slider
+        let currentSlide = 1;
+
+        function changeSlide(n) {
+            showSlide(currentSlide += n);
+        }
+
+        function showSlide(n) {
+            let slides = document.getElementsByClassName("slide");
+
+            if (n > slides.length) {
+                currentSlide = 1;
+            }
+
+            if (n < 1) {
+                currentSlide = slides.length;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[currentSlide - 1].style.display = "block";
+        }
+
+        var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slide");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+    </script>
+        <!---------- Testimonial HTML Starts --------->
+        <div class="main-section bg-grey">
+            <div class="container">
+                <h2 class="heading-section"> What <span>Student Say's</span>
+                    About Our Campus</h2>
+                <p class="subhead-section">Lorem Ipsum is simply dummy text of
+                    the printing and typesetting industry </p>
+            
+            <div style="display: flex; flex-direction: row;flex-wrap: wrap;">
+                <marquee direction="left" height="400" scrollamount="5" class="comments" style="display: flex; flex-direction: row;flex-wrap: auto;">
+                    
+                    <div class="tetimonial">
+                        <div class="width-100">
+                            <div class="width-30 usermain">
+                                <div class="tetimonial-user"
+                                    style="display:flex; align-items: center; justify-content: center;">
+                                    <img class="hello"
+                                        src="images/prayagcomment.jpg"
+                                        style="margin: 15px;">
+                                    <div>
+                                        <h4><strong>Prayag Chavda</strong></h4>
+                                        <p>Professional Trader</p>
+
+                                    </div>
+                                    <div class="width-10"> <i
+                                            class="fa fa-quote-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="testimonial-comment">
+                            <h4 class="size">Great Courses</h4>
+                            <p class="paragraph1"> Lorem Ipsum is simply dummy
+                                text of the print<br>
+                                and typesetting industry.Lorem Ipsum has
+                                been<br>
+                                the industry's standard dummy text ever
+                                since<br>
+                                the 1500s, when an unknown printer a galley.
+                            </p>
+                            <link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+
+                    <div class="tetimonial">
+                        <div class="width-100">
+                            <div class="width-30 usermain">
+                                <div class="tetimonial-user"
+                                    style="display:flex; align-items: center; justify-content: center;">
+                                    <img class="hello"
+                                        src="images/brijeshcomment.jpg"
+                                        style="margin: 15px;">
+                                    <div>
+                                        <h4><strong>Brijesh Parmar</strong></h4>
+                                        <p>Game Developer </p>
+
+                                    </div>
+                                    <div class="width-10"> <i
+                                            class="fa fa-quote-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="testimonial-comment">
+                            <h4 class="size">Great Courses</h4>
+                            <p class="paragraph1"> Lorem Ipsum is simply dummy
+                                text of the print<br>
+                                and typesetting industry.Lorem Ipsum has
+                                been<br>
+                                the industry's standard dummy text ever
+                                since<br>
+                                the 1500s, when an unknown printer a galley.
+                            </p>
+                            <link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+
+                    <div class="tetimonial">
+                        <div class="width-100">
+                            <div class="width-30 usermain">
+                                <div class="tetimonial-user"
+                                    style="display:flex; align-items: center; justify-content: center;">
+                                    <img class="hello"
+                                        src="images/ramcomment.jpg"
+                                        style="margin: 15px;">
+                                    <div>
+                                        <h4><strong>Ram Solanki</strong></h4>
+                                        <p>Professional Hacker</p>
+
+                                    </div>
+                                    <div class="width-10"> <i
+                                            class="fa fa-quote-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="testimonial-comment">
+                            <h4 class="size">Great Courses</h4>
+                            <p class="paragraph1"> Lorem Ipsum is simply dummy
+                                text of the print<br>
+                                and typesetting industry.Lorem Ipsum has
+                                been<br>
+                                the industry's standard dummy text ever
+                                since<br>
+                                the 1500s, when an unknown printer a galley.
+                            </p>
+                            <link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                    <div class="tetimonial">
+                        <div class="width-100">
+                            <div class="width-30 usermain">
+                                <div class="tetimonial-user"
+                                    style="display:flex; align-items: center; justify-content: center;">
+                                    <img class="hello"
+                                        src="images/aayushcomment.jpg"
+                                        style="margin: 15px;">
+                                    <div>
+                                        <h4><strong>Aayush Kukadiya</strong></h4>
+                                        <p>Professional Gamer</p>
+
+                                    </div>
+                                    <div class="width-10"> <i
+                                            class="fa fa-quote-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="testimonial-comment">
+                            <h4 class="size">Great Courses</h4>
+                            <p class="paragraph1"> Lorem Ipsum is simply dummy
+                                text of the print<br>
+                                and typesetting industry.Lorem Ipsum has
+                                been<br>
+                                the industry's standard dummy text ever
+                                since<br>
+                                the 1500s, when an unknown printer a galley.
+                            </p>
+                            <link rel="stylesheet"
+                                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                    </div>
+                </marquee>
+                </div>
+            </div>
+        </div>
+
+        <!---------- Testimonial HTML Ends --------->
+    </body>
+
+    <!---------- Footer HTML Starts --------->
+    <footer>
+        <div class="footer-container">
+            <div class="quick-links">
+                <h2>QUICK LINKS</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="get-in-touch">
+                <h2>GET IN TOUCH</h2>
+                <ul>
+                    <li><a href="#">+91 7923215965</a></li>
+                    <li><a href="#"> gec-gnagar-dte@gujarat.gov.in</a></li>
+                    <li><a href="#">https://www.gecg28.ac.in/</a></li>
+                </ul>
+            </div>
+            <div class="connect-with-us">
+                <h2>CONNECT WITH US</h2>
+                <!-- Add icon library -->
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                <!-- Add font awesome icons -->
+                <a href="https://facebook.com/gecg28`"
+                    class="fa fa-facebook"></a>
+                <a
+                    href="https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Aorganization%3A15103295&keywords=government%20engineering%20college%2Cgandhinagar&origin=RICH_QUERY_SUGGESTION&position=0&searchId=a848a617-52fb-4967-8065-986f6118c35a&sid=rtr&spellCorrectionEnabled=false"
+                    class="fa fa-linkedin"></a>
+                <a href="https://www.instagram.com/gec__gandhinagarofficial/"
+                    class="fa fa-instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!---------- Footer HTML Ends --------->
+
+</html>
